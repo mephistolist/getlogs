@@ -3,6 +3,8 @@
    
    gcc -march=native -pipe -Ofast -fno-defer-pop -s getlogs.c -o getlogs -lpthread -s
 
+   Doing the same actions in bash rendered the following:
+
    $ time lsof 2>&1 | awk '/apache2|httpd|nginx/ && /access/ && /log/ { print $9 }' | sort -u
    /var/log/apache2/access.log
    /var/log/apache2/other_vhosts_access.log
@@ -23,7 +25,7 @@
    sys	0.00s
    cpu	0%
 
-Its clear the C implementation is much faster:
+Its clear the C implementation is much faster on the same machine:
 
    $ time ./getlogs
    /var/log/apache2/other_vhosts_access.log
