@@ -25,4 +25,4 @@ real	0m0.001s<br />
 user	0m0.001s<br />
 sys	0m0.000s
 
-This may not seem noteworthy until someone is on a server that is almost out of CPU or memory when actions that normally take millisecons can take 30 seconds or greater. 
+This may not seem noteworthy until someone is on a server that is almost out of CPU or memory when actions that normally take millisecons can take 30 seconds or greater. Usually variaous log files hold the answers to resolving memory and CPU issues. So this was the motivation for this project.
