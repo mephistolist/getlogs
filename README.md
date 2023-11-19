@@ -5,9 +5,9 @@ You make build with the following:
 
 $ make
 
-Doing the same actions in bash rendered the following:
+Doing the same actions in bash render the following:
 
-root@tiny:/home/ph33r/tito/getlogs# time lsof 2>&1 | awk '/apache2|httpd|nginx/ && /access/ && /log/ { print $9 }' | sort -u<br />
+$ time lsof 2>&1 | awk '/apache2|httpd|nginx/ && /access/ && /log/ { print $9 }' | sort -u<br />
 /var/log/apache2/access.log<br />
 /var/log/apache2/other_vhosts_access.log<br />
 
