@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-march=native -D_GNU_SOURCE -O2 -Wall -Wextra -fPIC --std=c17 -pipe -s
+CFLAGS=-march=native -D_POSIX_C_SOURCE -D_GNU_SOURCE -O2 -Wall -Wextra -fPIC --std=c17 -pipe -s
 
 all:
 	$(CC) -S -masm=intel getlogs.c $(CFLAGS)
