@@ -55,8 +55,9 @@ void findpid(char *filename) {
 
     FILE *file;
     file = fopen(filename, "r");
-    while (fgets(pid, sizeof(pid), file) != NULL)
+    while (fgets(pid, sizeof(pid), file) != NULL) {
         strtok(pid, "\n"); // Strip newline.
+    }
     strncat(pro, pid, 10);
     strncat(pro, fd, 10);
     strncpy(dir, pro, sizeof(dir) - 1);
