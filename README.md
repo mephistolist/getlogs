@@ -17,7 +17,7 @@ sys	0m0.065s
 
 Its clear the C/Assembly implementation is much faster on the same machine:
 
-$ time ./getlog<br />
+$ time ./getlogs<br />
 /var/log/apache2/other_vhosts_access.log<br />
 /var/log/apache2/access.log<br />
 
