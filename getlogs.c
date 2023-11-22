@@ -25,7 +25,6 @@ void symfind(char *b) {
     }
 
     r = readlink(b, linkname, sb.st_size + 1);
-
     if (r == -1) {
         perror("readlink");
         exit(EXIT_FAILURE);
@@ -38,7 +37,6 @@ void symfind(char *b) {
     }
 
     linkname[r] = '\0';
-
     if (strstr(linkname, match) != NULL) {
         printf("%s\n", linkname);
     }
